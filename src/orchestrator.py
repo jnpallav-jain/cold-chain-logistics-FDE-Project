@@ -38,12 +38,12 @@ if AGENT_LLM_SETTING == "OPENAI":
     llm = ChatOpenAI(model="gpt-4o", temperature=0)
 
 elif AGENT_LLM_SETTING == "DEEPSEEK":
-    print("🐳 Brain Mode: Utilizing Flagship DeepSeek Cloud Reasoner (deepseek-v4-pro)...")
+    print("🐳 Brain Mode: Utilizing DeepSeek Cloud Reasoner (deepseek-flash)...")
     from langchain_openai import ChatOpenAI
     
     # Fully updated to match 2026 DeepSeek API parameters and endpoint contracts
     llm = ChatOpenAI(
-        model="deepseek-v4-flash",                           # deepseek-v4-flash, deepseek-v4-pro
+        model="deepseek-flash",                              # deepseek-flash, deepseek-v4-pro
         temperature=0,
         openai_api_key=os.getenv("DEEPSEEK_API_KEY"),
         base_url="https://api.deepseek.com",     # Fixed connection string url endpoint

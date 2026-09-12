@@ -4,3 +4,6 @@ venv/
 .venv/
 .DS_Store
 .idea/
+docs/
+Misc/
+notes.pdf
